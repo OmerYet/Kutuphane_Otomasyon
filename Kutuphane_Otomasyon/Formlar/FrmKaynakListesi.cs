@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kutuphane_Otomasyon
+namespace Kutuphane_Otomasyon.Formlar
 {
-    public partial class Form1 : Form
+    public partial class FrmKaynakListesi : Form
     {
-        public Form1()
+        public FrmKaynakListesi()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
