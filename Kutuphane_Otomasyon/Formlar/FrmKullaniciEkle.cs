@@ -22,6 +22,8 @@ namespace Kutuphane_Otomasyon.Kullanici
             
             var kullanicilar = db.Kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            dataGridView1.Columns[13].Visible = false;
+
         }
 
         private void FrmKullaniciEkle_Load(object sender, EventArgs e)

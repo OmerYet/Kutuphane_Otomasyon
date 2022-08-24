@@ -39,6 +39,9 @@
     <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -68,11 +71,35 @@
     <Compile Include="Formlar\FrmAnaSayfa.Designer.cs">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\FrmIslemYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmIslemYap.Designer.cs">
+      <DependentUpon>FrmIslemYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakEkle.Designer.cs">
+      <DependentUpon>FrmKaynakEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakGuncelle.Designer.cs">
+      <DependentUpon>FrmKaynakGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\FrmKaynakListesi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\FrmKaynakListesi.Designer.cs">
       <DependentUpon>FrmKaynakListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmKaynakSil.Designer.cs">
+      <DependentUpon>FrmKaynakSil.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\FrmKullaniciGuncelle.cs">
       <SubType>Form</SubType>
@@ -85,6 +112,12 @@
     </Compile>
     <Compile Include="Formlar\FrmKullaniciSil.Designer.cs">
       <DependentUpon>FrmKullaniciSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kayitlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kaynaklar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Kullanicilar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -107,6 +140,9 @@
     <Compile Include="Formlar\IslemPaneli.Designer.cs">
       <DependentUpon>IslemPaneli.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kutuphane.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,11 +163,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formlar\FrmAnaSayfa.resx">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmIslemYap.resx">
+      <DependentUpon>FrmIslemYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmKaynakEkle.resx">
+      <DependentUpon>FrmKaynakEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmKaynakGuncelle.resx">
+      <DependentUpon>FrmKaynakGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmKaynakListesi.resx">
       <DependentUpon>FrmKaynakListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmKaynakSil.resx">
+      <DependentUpon>FrmKaynakSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmKullaniciEkle.resx">
       <DependentUpon>FrmKullaniciEkle.cs</DependentUpon>

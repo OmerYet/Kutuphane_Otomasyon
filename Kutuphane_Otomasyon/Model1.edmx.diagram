@@ -5,8 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9fafdd58ce4643ffa248a80eab821bc5" Name="Diagram1">
-        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Personeller" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Kullanicilar" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Personeller" Width="1.875" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Kullanicilar" Width="2" PointX="2.875" PointY="0.5" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Kutuphane" Width="1.875" PointX="5.25" PointY="0.5" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Kaynaklar" Width="1.5" PointX="5.25" PointY="3.125" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.Kayitlar" Width="1.5" PointX="7.5" PointY="0.5" />
+        <EntityTypeShape EntityType="DbKutuphaneOtomasyonModel.sysdiagrams" Width="1.5" PointX="0.5" PointY="5.125" />
+        <AssociationConnector Association="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kaynaklar" />
+        <AssociationConnector Association="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kullanicilar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

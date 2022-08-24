@@ -31,6 +31,7 @@ namespace Kutuphane_Otomasyon
             islempKaynakSilbtn.Visible = false;
         }
 
+        //Kullanıcılar
         private void islempKullanicibtn_Click(object sender, EventArgs e)
         { 
             if(islempEklebtn.Visible == false)
@@ -50,6 +51,7 @@ namespace Kutuphane_Otomasyon
             FrmKullaniciListesi klistesiform = new FrmKullaniciListesi();
             klistesiform.MdiParent = this;
             klistesiform.Show();
+            
         }
 
         private void islempEklebtn_Click(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace Kutuphane_Otomasyon
 
 
 
-
+        //Kaynaklar
 
 
         private void islempKaynakbtn_Click(object sender, EventArgs e)
@@ -98,6 +100,36 @@ namespace Kutuphane_Otomasyon
             FrmKaynakListesi kalistesiform= new FrmKaynakListesi();
             kalistesiform.MdiParent = this;
             kalistesiform.Show();
+        }
+
+        private void islempKaynakEklebtn_Click(object sender, EventArgs e)
+        {
+            FrmKaynakEkle kaynakekleForm = new FrmKaynakEkle();
+            kaynakekleForm.MdiParent = this;
+            kaynakekleForm.Show();
+        }
+
+        private void islempKaynakGuncellebtn_Click(object sender, EventArgs e)
+        {
+            FrmKaynakGuncelle kaynakguncelleForm = new FrmKaynakGuncelle();
+            kaynakguncelleForm.MdiParent = this;
+            kaynakguncelleForm.Show();
+        }
+
+        private void islempKaynakSilbtn_Click(object sender, EventArgs e)
+        {
+            FrmKaynakSil kaynaksilForm = new FrmKaynakSil();
+            kaynaksilForm.MdiParent = this;
+            kaynaksilForm.Show();
+        }
+
+
+        //İşlem Yap 
+        private void islemyIslemYapbtn_Click(object sender, EventArgs e)
+        {
+            FrmIslemYap islemyapForm = new FrmIslemYap();
+            islemyapForm.MdiParent = this;
+            islemyapForm.Show();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Kutuphane_Otomasyon
             DbKutuphaneOtomasyonEntities db = new DbKutuphaneOtomasyonEntities();
             var kullanicilar = db.Kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            dataGridView1.Columns[13].Visible = false;
         }
         private void FrmKullaniciListesi_Load(object sender, EventArgs e)
         {

@@ -31,15 +31,17 @@ namespace Kutuphane_Otomasyon
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IslemPaneli));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.islemyIslemYapbtn = new System.Windows.Forms.Button();
+            this.islempKaynakSilbtn = new System.Windows.Forms.Button();
+            this.islempKaynakGuncellebtn = new System.Windows.Forms.Button();
+            this.islempKaynakEklebtn = new System.Windows.Forms.Button();
+            this.islempKaynakbtn = new System.Windows.Forms.Button();
             this.islempSilbtn = new System.Windows.Forms.Button();
             this.islempGuncellebtn = new System.Windows.Forms.Button();
             this.islempEklebtn = new System.Windows.Forms.Button();
             this.islempKullanicibtn = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
-            this.islempKaynakbtn = new System.Windows.Forms.Button();
-            this.islempKaynakEklebtn = new System.Windows.Forms.Button();
-            this.islempKaynakSilbtn = new System.Windows.Forms.Button();
-            this.islempKaynakGuncellebtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,8 @@ namespace Kutuphane_Otomasyon
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.islemyIslemYapbtn);
             this.panel1.Controls.Add(this.islempKaynakSilbtn);
             this.panel1.Controls.Add(this.islempKaynakGuncellebtn);
             this.panel1.Controls.Add(this.islempKaynakEklebtn);
@@ -58,8 +62,93 @@ namespace Kutuphane_Otomasyon
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 703);
+            this.panel1.Size = new System.Drawing.Size(245, 686);
             this.panel1.TabIndex = 0;
+            // 
+            // islemyIslemYapbtn
+            // 
+            this.islemyIslemYapbtn.BackColor = System.Drawing.Color.Wheat;
+            this.islemyIslemYapbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islemyIslemYapbtn.FlatAppearance.BorderSize = 0;
+            this.islemyIslemYapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islemyIslemYapbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islemyIslemYapbtn.Image = ((System.Drawing.Image)(resources.GetObject("islemyIslemYapbtn.Image")));
+            this.islemyIslemYapbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islemyIslemYapbtn.Location = new System.Drawing.Point(0, 490);
+            this.islemyIslemYapbtn.Name = "islemyIslemYapbtn";
+            this.islemyIslemYapbtn.Size = new System.Drawing.Size(245, 80);
+            this.islemyIslemYapbtn.TabIndex = 8;
+            this.islemyIslemYapbtn.Text = "İşlem Yap";
+            this.islemyIslemYapbtn.UseVisualStyleBackColor = false;
+            this.islemyIslemYapbtn.Click += new System.EventHandler(this.islemyIslemYapbtn_Click);
+            // 
+            // islempKaynakSilbtn
+            // 
+            this.islempKaynakSilbtn.BackColor = System.Drawing.Color.Azure;
+            this.islempKaynakSilbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islempKaynakSilbtn.FlatAppearance.BorderSize = 0;
+            this.islempKaynakSilbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islempKaynakSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islempKaynakSilbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakSilbtn.Image")));
+            this.islempKaynakSilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islempKaynakSilbtn.Location = new System.Drawing.Point(0, 435);
+            this.islempKaynakSilbtn.Name = "islempKaynakSilbtn";
+            this.islempKaynakSilbtn.Size = new System.Drawing.Size(245, 55);
+            this.islempKaynakSilbtn.TabIndex = 7;
+            this.islempKaynakSilbtn.Text = "Sil";
+            this.islempKaynakSilbtn.UseVisualStyleBackColor = false;
+            this.islempKaynakSilbtn.Click += new System.EventHandler(this.islempKaynakSilbtn_Click);
+            // 
+            // islempKaynakGuncellebtn
+            // 
+            this.islempKaynakGuncellebtn.BackColor = System.Drawing.Color.Azure;
+            this.islempKaynakGuncellebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islempKaynakGuncellebtn.FlatAppearance.BorderSize = 0;
+            this.islempKaynakGuncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islempKaynakGuncellebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islempKaynakGuncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakGuncellebtn.Image")));
+            this.islempKaynakGuncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islempKaynakGuncellebtn.Location = new System.Drawing.Point(0, 380);
+            this.islempKaynakGuncellebtn.Name = "islempKaynakGuncellebtn";
+            this.islempKaynakGuncellebtn.Size = new System.Drawing.Size(245, 55);
+            this.islempKaynakGuncellebtn.TabIndex = 6;
+            this.islempKaynakGuncellebtn.Text = "Güncelle";
+            this.islempKaynakGuncellebtn.UseVisualStyleBackColor = false;
+            this.islempKaynakGuncellebtn.Click += new System.EventHandler(this.islempKaynakGuncellebtn_Click);
+            // 
+            // islempKaynakEklebtn
+            // 
+            this.islempKaynakEklebtn.BackColor = System.Drawing.Color.Azure;
+            this.islempKaynakEklebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islempKaynakEklebtn.FlatAppearance.BorderSize = 0;
+            this.islempKaynakEklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islempKaynakEklebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islempKaynakEklebtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakEklebtn.Image")));
+            this.islempKaynakEklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islempKaynakEklebtn.Location = new System.Drawing.Point(0, 325);
+            this.islempKaynakEklebtn.Name = "islempKaynakEklebtn";
+            this.islempKaynakEklebtn.Size = new System.Drawing.Size(245, 55);
+            this.islempKaynakEklebtn.TabIndex = 5;
+            this.islempKaynakEklebtn.Text = "Ekle";
+            this.islempKaynakEklebtn.UseVisualStyleBackColor = false;
+            this.islempKaynakEklebtn.Click += new System.EventHandler(this.islempKaynakEklebtn_Click);
+            // 
+            // islempKaynakbtn
+            // 
+            this.islempKaynakbtn.BackColor = System.Drawing.Color.Wheat;
+            this.islempKaynakbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islempKaynakbtn.FlatAppearance.BorderSize = 0;
+            this.islempKaynakbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islempKaynakbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islempKaynakbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakbtn.Image")));
+            this.islempKaynakbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islempKaynakbtn.Location = new System.Drawing.Point(0, 245);
+            this.islempKaynakbtn.Name = "islempKaynakbtn";
+            this.islempKaynakbtn.Size = new System.Drawing.Size(245, 80);
+            this.islempKaynakbtn.TabIndex = 4;
+            this.islempKaynakbtn.Text = "Kaynaklar";
+            this.islempKaynakbtn.UseVisualStyleBackColor = false;
+            this.islempKaynakbtn.Click += new System.EventHandler(this.islempKaynakbtn_Click);
             // 
             // islempSilbtn
             // 
@@ -70,9 +159,9 @@ namespace Kutuphane_Otomasyon
             this.islempSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.islempSilbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempSilbtn.Image")));
             this.islempSilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempSilbtn.Location = new System.Drawing.Point(0, 240);
+            this.islempSilbtn.Location = new System.Drawing.Point(0, 190);
             this.islempSilbtn.Name = "islempSilbtn";
-            this.islempSilbtn.Size = new System.Drawing.Size(245, 80);
+            this.islempSilbtn.Size = new System.Drawing.Size(245, 55);
             this.islempSilbtn.TabIndex = 3;
             this.islempSilbtn.Text = "Sil";
             this.islempSilbtn.UseVisualStyleBackColor = false;
@@ -87,9 +176,9 @@ namespace Kutuphane_Otomasyon
             this.islempGuncellebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.islempGuncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("islempGuncellebtn.Image")));
             this.islempGuncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempGuncellebtn.Location = new System.Drawing.Point(0, 160);
+            this.islempGuncellebtn.Location = new System.Drawing.Point(0, 135);
             this.islempGuncellebtn.Name = "islempGuncellebtn";
-            this.islempGuncellebtn.Size = new System.Drawing.Size(245, 80);
+            this.islempGuncellebtn.Size = new System.Drawing.Size(245, 55);
             this.islempGuncellebtn.TabIndex = 2;
             this.islempGuncellebtn.Text = "Güncelle";
             this.islempGuncellebtn.UseVisualStyleBackColor = false;
@@ -106,7 +195,7 @@ namespace Kutuphane_Otomasyon
             this.islempEklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.islempEklebtn.Location = new System.Drawing.Point(0, 80);
             this.islempEklebtn.Name = "islempEklebtn";
-            this.islempEklebtn.Size = new System.Drawing.Size(245, 80);
+            this.islempEklebtn.Size = new System.Drawing.Size(245, 55);
             this.islempEklebtn.TabIndex = 1;
             this.islempEklebtn.Text = "Ekle";
             this.islempEklebtn.UseVisualStyleBackColor = false;
@@ -135,84 +224,36 @@ namespace Kutuphane_Otomasyon
             this.kullaniciBilgiPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.kullaniciBilgiPanel.Location = new System.Drawing.Point(245, 0);
             this.kullaniciBilgiPanel.Name = "kullaniciBilgiPanel";
-            this.kullaniciBilgiPanel.Size = new System.Drawing.Size(1050, 80);
+            this.kullaniciBilgiPanel.Size = new System.Drawing.Size(1256, 80);
             this.kullaniciBilgiPanel.TabIndex = 0;
             // 
-            // islempKaynakbtn
+            // button1
             // 
-            this.islempKaynakbtn.BackColor = System.Drawing.Color.Wheat;
-            this.islempKaynakbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.islempKaynakbtn.FlatAppearance.BorderSize = 0;
-            this.islempKaynakbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.islempKaynakbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islempKaynakbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakbtn.Image")));
-            this.islempKaynakbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempKaynakbtn.Location = new System.Drawing.Point(0, 320);
-            this.islempKaynakbtn.Name = "islempKaynakbtn";
-            this.islempKaynakbtn.Size = new System.Drawing.Size(245, 80);
-            this.islempKaynakbtn.TabIndex = 4;
-            this.islempKaynakbtn.Text = "Kaynaklar";
-            this.islempKaynakbtn.UseVisualStyleBackColor = false;
-            this.islempKaynakbtn.Click += new System.EventHandler(this.islempKaynakbtn_Click);
-            // 
-            // islempKaynakEklebtn
-            // 
-            this.islempKaynakEklebtn.BackColor = System.Drawing.Color.Azure;
-            this.islempKaynakEklebtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.islempKaynakEklebtn.FlatAppearance.BorderSize = 0;
-            this.islempKaynakEklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.islempKaynakEklebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islempKaynakEklebtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakEklebtn.Image")));
-            this.islempKaynakEklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempKaynakEklebtn.Location = new System.Drawing.Point(0, 400);
-            this.islempKaynakEklebtn.Name = "islempKaynakEklebtn";
-            this.islempKaynakEklebtn.Size = new System.Drawing.Size(245, 80);
-            this.islempKaynakEklebtn.TabIndex = 5;
-            this.islempKaynakEklebtn.Text = "Ekle";
-            this.islempKaynakEklebtn.UseVisualStyleBackColor = false;
-            // 
-            // islempKaynakSilbtn
-            // 
-            this.islempKaynakSilbtn.BackColor = System.Drawing.Color.Azure;
-            this.islempKaynakSilbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.islempKaynakSilbtn.FlatAppearance.BorderSize = 0;
-            this.islempKaynakSilbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.islempKaynakSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islempKaynakSilbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakSilbtn.Image")));
-            this.islempKaynakSilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempKaynakSilbtn.Location = new System.Drawing.Point(0, 560);
-            this.islempKaynakSilbtn.Name = "islempKaynakSilbtn";
-            this.islempKaynakSilbtn.Size = new System.Drawing.Size(245, 80);
-            this.islempKaynakSilbtn.TabIndex = 7;
-            this.islempKaynakSilbtn.Text = "Sil";
-            this.islempKaynakSilbtn.UseVisualStyleBackColor = false;
-            // 
-            // islempKaynakGuncellebtn
-            // 
-            this.islempKaynakGuncellebtn.BackColor = System.Drawing.Color.Azure;
-            this.islempKaynakGuncellebtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.islempKaynakGuncellebtn.FlatAppearance.BorderSize = 0;
-            this.islempKaynakGuncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.islempKaynakGuncellebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islempKaynakGuncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("islempKaynakGuncellebtn.Image")));
-            this.islempKaynakGuncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.islempKaynakGuncellebtn.Location = new System.Drawing.Point(0, 480);
-            this.islempKaynakGuncellebtn.Name = "islempKaynakGuncellebtn";
-            this.islempKaynakGuncellebtn.Size = new System.Drawing.Size(245, 80);
-            this.islempKaynakGuncellebtn.TabIndex = 6;
-            this.islempKaynakGuncellebtn.Text = "Güncelle";
-            this.islempKaynakGuncellebtn.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Wheat;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 570);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 80);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "İşlem Yap";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // IslemPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 703);
+            this.ClientSize = new System.Drawing.Size(1501, 686);
             this.Controls.Add(this.kullaniciBilgiPanel);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "IslemPaneli";
             this.Text = "IslemPaneli";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.IslemPaneli_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -231,5 +272,7 @@ namespace Kutuphane_Otomasyon
         private System.Windows.Forms.Button islempKaynakGuncellebtn;
         private System.Windows.Forms.Button islempKaynakEklebtn;
         private System.Windows.Forms.Button islempKaynakbtn;
+        private System.Windows.Forms.Button islemyIslemYapbtn;
+        private System.Windows.Forms.Button button1;
     }
 }

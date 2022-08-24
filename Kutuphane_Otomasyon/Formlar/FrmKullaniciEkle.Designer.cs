@@ -324,6 +324,7 @@ namespace Kutuphane_Otomasyon.Kullanici
             this.Controls.Add(this.label1);
             this.Name = "FrmKullaniciEkle";
             this.Text = "FrmKullaniciEkle";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmKullaniciEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

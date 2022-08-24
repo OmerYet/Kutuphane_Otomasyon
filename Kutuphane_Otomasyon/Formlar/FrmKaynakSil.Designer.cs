@@ -1,7 +1,7 @@
 ﻿
 namespace Kutuphane_Otomasyon.Formlar
 {
-    partial class FrmKullaniciSil
+    partial class FrmKaynakSil
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Kutuphane_Otomasyon.Formlar
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kullaniciSilbtn = new System.Windows.Forms.Button();
+            this.kaynakSilbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,32 +42,31 @@ namespace Kutuphane_Otomasyon.Formlar
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1970, 670);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 1;
             // 
-            // kullaniciSilbtn
+            // kaynakSilbtn
             // 
-            this.kullaniciSilbtn.BackColor = System.Drawing.Color.Crimson;
-            this.kullaniciSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullaniciSilbtn.Location = new System.Drawing.Point(12, 12);
-            this.kullaniciSilbtn.Name = "kullaniciSilbtn";
-            this.kullaniciSilbtn.Size = new System.Drawing.Size(166, 105);
-            this.kullaniciSilbtn.TabIndex = 1;
-            this.kullaniciSilbtn.Text = "Sil";
-            this.kullaniciSilbtn.UseVisualStyleBackColor = false;
-            this.kullaniciSilbtn.Click += new System.EventHandler(this.kullaniciSilbtn_Click);
+            this.kaynakSilbtn.BackColor = System.Drawing.Color.Crimson;
+            this.kaynakSilbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kaynakSilbtn.Location = new System.Drawing.Point(12, 12);
+            this.kaynakSilbtn.Name = "kaynakSilbtn";
+            this.kaynakSilbtn.Size = new System.Drawing.Size(166, 105);
+            this.kaynakSilbtn.TabIndex = 2;
+            this.kaynakSilbtn.Text = "Sil";
+            this.kaynakSilbtn.UseVisualStyleBackColor = false;
+            this.kaynakSilbtn.Click += new System.EventHandler(this.kaynakSilbtn_Click);
             // 
-            // FrmKullaniciSil
+            // FrmKaynakSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1994, 805);
-            this.Controls.Add(this.kullaniciSilbtn);
+            this.Controls.Add(this.kaynakSilbtn);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmKullaniciSil";
-            this.Text = "FrmKullaniciSil";
+            this.Name = "FrmKaynakSil";
+            this.Text = "FrmKaynakSil";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmKullaniciSil_Load);
+            this.Load += new System.EventHandler(this.FrmKaynakSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -76,6 +75,6 @@ namespace Kutuphane_Otomasyon.Formlar
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button kullaniciSilbtn;
+        private System.Windows.Forms.Button kaynakSilbtn;
     }
 }

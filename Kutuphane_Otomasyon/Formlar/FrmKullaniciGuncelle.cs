@@ -21,10 +21,11 @@ namespace Kutuphane_Otomasyon.Formlar
         {
             var kullanicilar = db.Kullanicilar.ToList();
             dataGridView1.DataSource = kullanicilar.ToList();
+            dataGridView1.Columns[13].Visible = false;
+
         }
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             kullaniciAdtxt.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             kullaniciSoyadtxt.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -42,6 +43,8 @@ namespace Kutuphane_Otomasyon.Formlar
             kullaniciCezatxt.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
             kullaniciKutuphanetxt.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
         }
+
+        
 
         private void FrmKullaniciGuncelle_Load(object sender, EventArgs e)
         {
@@ -74,5 +77,6 @@ namespace Kutuphane_Otomasyon.Formlar
             db.SaveChanges();
             Listele();
         }
+
     }
 }

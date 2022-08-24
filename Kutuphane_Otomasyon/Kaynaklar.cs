@@ -12,27 +12,21 @@ namespace Kutuphane_Otomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Kullanicilar
+    public partial class Kaynaklar
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Kullanicilar()
+        public Kaynaklar()
         {
             this.Kayitlar = new HashSet<Kayitlar>();
         }
     
-        public int Kullanici_iD { get; set; }
-        public string Kullanici_Ad { get; set; }
-        public string Kullanici_Soyad { get; set; }
-        public int Kullanici_Yas { get; set; }
-        public string Kullanici_Cinsiyet { get; set; }
-        public Nullable<int> Kullanici_KitapSayisi { get; set; }
-        public Nullable<int> Kullanici_SayfaSayisi { get; set; }
-        public Nullable<int> Kullanici_FavTuriD { get; set; }
-        public string Kullanici_Tc { get; set; }
-        public string Kullanici_Tel { get; set; }
-        public Nullable<double> Kullanici_Ceza { get; set; }
-        public int Kutuphane_iD { get; set; }
-        public string Kullanici_Mail { get; set; }
+        public int Kaynak_iD { get; set; }
+        public string Kaynak_Ad { get; set; }
+        public string Kaynak_Tur { get; set; }
+        public string Kaynak_Yazar { get; set; }
+        public string Kaynak_Yayıncı { get; set; }
+        public Nullable<System.DateTime> Kaynak_BasımTarihi { get; set; }
+        public Nullable<int> Kaynak_SayfaSayisi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kayitlar> Kayitlar { get; set; }

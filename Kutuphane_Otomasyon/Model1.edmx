@@ -5,6 +5,29 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DbKutuphaneOtomasyonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kayitlar">
+          <Key>
+            <PropertyRef Name="Kayit_iD" />
+          </Key>
+          <Property Name="Kayit_iD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kullanici_iD" Type="int" Nullable="false" />
+          <Property Name="Kaynak_iD" Type="int" Nullable="false" />
+          <Property Name="Kayit_AlisTarih" Type="datetime" />
+          <Property Name="Kayit_SonTarih" Type="datetime" />
+          <Property Name="Kayit_Durum" Type="bit" />
+        </EntityType>
+        <EntityType Name="Kaynaklar">
+          <Key>
+            <PropertyRef Name="Kaynak_iD" />
+          </Key>
+          <Property Name="Kaynak_iD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kaynak_Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kaynak_Tur" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kaynak_Yazar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kaynak_SayfaSayisi" Type="int" />
+          <Property Name="Kaynak_Yayıncı" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kaynak_BasımTarihi" Type="datetime" />
+        </EntityType>
         <EntityType Name="Kullanicilar">
           <Key>
             <PropertyRef Name="Kullanici_iD" />
@@ -23,6 +46,15 @@
           <Property Name="Kullanici_Ceza" Type="float" />
           <Property Name="Kutuphane_iD" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Kutuphane">
+          <Key>
+            <PropertyRef Name="Kutuphane_iD" />
+          </Key>
+          <Property Name="Kutuphane_iD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kutuphane_Ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kutuphane_Sehir" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kutuphane_KisiSayisi" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Personeller">
           <Key>
             <PropertyRef Name="Personel_iD" />
@@ -36,9 +68,55 @@
           <Property Name="Personel_KullaniciAd" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Personel_Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Kayitlar_Kaynaklar">
+          <End Role="Kaynaklar" Type="Self.Kaynaklar" Multiplicity="1" />
+          <End Role="Kayitlar" Type="Self.Kayitlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kaynaklar">
+              <PropertyRef Name="Kaynak_iD" />
+            </Principal>
+            <Dependent Role="Kayitlar">
+              <PropertyRef Name="Kaynak_iD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kayitlar_Kullanicilar">
+          <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+          <End Role="Kayitlar" Type="Self.Kayitlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanicilar">
+              <PropertyRef Name="Kullanici_iD" />
+            </Principal>
+            <Dependent Role="Kayitlar">
+              <PropertyRef Name="Kullanici_iD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbKutuphaneOtomasyonModelStoreContainer">
+          <EntitySet Name="Kayitlar" EntityType="Self.Kayitlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kaynaklar" EntityType="Self.Kaynaklar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kutuphane" EntityType="Self.Kutuphane" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Kayitlar_Kaynaklar" Association="Self.FK_Kayitlar_Kaynaklar">
+            <End Role="Kaynaklar" EntitySet="Kaynaklar" />
+            <End Role="Kayitlar" EntitySet="Kayitlar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kayitlar_Kullanicilar" Association="Self.FK_Kayitlar_Kullanicilar">
+            <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+            <End Role="Kayitlar" EntitySet="Kayitlar" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -60,6 +138,18 @@
         <EntityContainer Name="DbKutuphaneOtomasyonEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Personeller" EntityType="Self.Personeller" />
           <EntitySet Name="Kullanicilar" EntityType="DbKutuphaneOtomasyonModel.Kullanicilar" />
+          <EntitySet Name="Kutuphane" EntityType="DbKutuphaneOtomasyonModel.Kutuphane" />
+          <EntitySet Name="Kaynaklar" EntityType="DbKutuphaneOtomasyonModel.Kaynaklar" />
+          <EntitySet Name="Kayitlar" EntityType="DbKutuphaneOtomasyonModel.Kayitlar" />
+          <EntitySet Name="sysdiagrams" EntityType="DbKutuphaneOtomasyonModel.sysdiagrams" />
+          <AssociationSet Name="FK_Kayitlar_Kaynaklar" Association="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kaynaklar">
+            <End Role="Kaynaklar" EntitySet="Kaynaklar" />
+            <End Role="Kayitlar" EntitySet="Kayitlar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kayitlar_Kullanicilar" Association="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kullanicilar">
+            <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+            <End Role="Kayitlar" EntitySet="Kayitlar" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Kullanicilar">
           <Key>
@@ -78,7 +168,77 @@
           <Property Name="Kullanici_Ceza" Type="Double" />
           <Property Name="Kutuphane_iD" Type="Int32" Nullable="false" />
           <Property Name="Kullanici_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Kayitlar" Relationship="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kullanicilar" FromRole="Kullanicilar" ToRole="Kayitlar" />
         </EntityType>
+        <EntityType Name="Kutuphane">
+          <Key>
+            <PropertyRef Name="Kutuphane_iD" />
+          </Key>
+          <Property Name="Kutuphane_iD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kutuphane_Ad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kutuphane_Sehir" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kutuphane_KisiSayisi" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kaynaklar">
+          <Key>
+            <PropertyRef Name="Kaynak_iD" />
+          </Key>
+          <Property Name="Kaynak_iD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kaynak_Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kaynak_Tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kaynak_Yazar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kaynak_Yayıncı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kaynak_BasımTarihi" Type="DateTime" Precision="3" />
+          <Property Name="Kaynak_SayfaSayisi" Type="Int32" />
+          <NavigationProperty Name="Kayitlar" Relationship="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kaynaklar" FromRole="Kaynaklar" ToRole="Kayitlar" />
+        </EntityType>
+        <EntityType Name="Kayitlar">
+          <Key>
+            <PropertyRef Name="Kayit_iD" />
+          </Key>
+          <Property Name="Kayit_iD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kullanici_iD" Type="Int32" Nullable="false" />
+          <Property Name="Kaynak_iD" Type="Int32" Nullable="false" />
+          <Property Name="Kayit_AlisTarih" Type="DateTime" Precision="3" />
+          <Property Name="Kayit_SonTarih" Type="DateTime" Precision="3" />
+          <Property Name="Kayit_Durum" Type="Boolean" />
+          <NavigationProperty Name="Kaynaklar" Relationship="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kaynaklar" FromRole="Kayitlar" ToRole="Kaynaklar" />
+          <NavigationProperty Name="Kullanicilar" Relationship="DbKutuphaneOtomasyonModel.FK_Kayitlar_Kullanicilar" FromRole="Kayitlar" ToRole="Kullanicilar" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Kayitlar_Kaynaklar">
+          <End Type="DbKutuphaneOtomasyonModel.Kaynaklar" Role="Kaynaklar" Multiplicity="1" />
+          <End Type="DbKutuphaneOtomasyonModel.Kayitlar" Role="Kayitlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kaynaklar">
+              <PropertyRef Name="Kaynak_iD" />
+            </Principal>
+            <Dependent Role="Kayitlar">
+              <PropertyRef Name="Kaynak_iD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kayitlar_Kullanicilar">
+          <End Type="DbKutuphaneOtomasyonModel.Kullanicilar" Role="Kullanicilar" Multiplicity="1" />
+          <End Type="DbKutuphaneOtomasyonModel.Kayitlar" Role="Kayitlar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanicilar">
+              <PropertyRef Name="Kullanici_iD" />
+            </Principal>
+            <Dependent Role="Kayitlar">
+              <PropertyRef Name="Kullanici_iD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -115,6 +275,52 @@
                 <ScalarProperty Name="Kullanici_Soyad" ColumnName="Kullanici_Soyad" />
                 <ScalarProperty Name="Kullanici_Ad" ColumnName="Kullanici_Ad" />
                 <ScalarProperty Name="Kullanici_iD" ColumnName="Kullanici_iD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kutuphane">
+            <EntityTypeMapping TypeName="DbKutuphaneOtomasyonModel.Kutuphane">
+              <MappingFragment StoreEntitySet="Kutuphane">
+                <ScalarProperty Name="Kutuphane_KisiSayisi" ColumnName="Kutuphane_KisiSayisi" />
+                <ScalarProperty Name="Kutuphane_Sehir" ColumnName="Kutuphane_Sehir" />
+                <ScalarProperty Name="Kutuphane_Ad" ColumnName="Kutuphane_Ad" />
+                <ScalarProperty Name="Kutuphane_iD" ColumnName="Kutuphane_iD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kaynaklar">
+            <EntityTypeMapping TypeName="DbKutuphaneOtomasyonModel.Kaynaklar">
+              <MappingFragment StoreEntitySet="Kaynaklar">
+                <ScalarProperty Name="Kaynak_SayfaSayisi" ColumnName="Kaynak_SayfaSayisi" />
+                <ScalarProperty Name="Kaynak_BasımTarihi" ColumnName="Kaynak_BasımTarihi" />
+                <ScalarProperty Name="Kaynak_Yayıncı" ColumnName="Kaynak_Yayıncı" />
+                <ScalarProperty Name="Kaynak_Yazar" ColumnName="Kaynak_Yazar" />
+                <ScalarProperty Name="Kaynak_Tur" ColumnName="Kaynak_Tur" />
+                <ScalarProperty Name="Kaynak_Ad" ColumnName="Kaynak_Ad" />
+                <ScalarProperty Name="Kaynak_iD" ColumnName="Kaynak_iD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kayitlar">
+            <EntityTypeMapping TypeName="DbKutuphaneOtomasyonModel.Kayitlar">
+              <MappingFragment StoreEntitySet="Kayitlar">
+                <ScalarProperty Name="Kayit_Durum" ColumnName="Kayit_Durum" />
+                <ScalarProperty Name="Kayit_SonTarih" ColumnName="Kayit_SonTarih" />
+                <ScalarProperty Name="Kayit_AlisTarih" ColumnName="Kayit_AlisTarih" />
+                <ScalarProperty Name="Kaynak_iD" ColumnName="Kaynak_iD" />
+                <ScalarProperty Name="Kullanici_iD" ColumnName="Kullanici_iD" />
+                <ScalarProperty Name="Kayit_iD" ColumnName="Kayit_iD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DbKutuphaneOtomasyonModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
