@@ -25,7 +25,7 @@ namespace Kutuphane_Otomasyon.Kullanici
             dataGridView1.Columns[13].Visible = false;
 
         }
-
+        
         private void FrmKullaniciEkle_Load(object sender, EventArgs e)
         {
             Listele();

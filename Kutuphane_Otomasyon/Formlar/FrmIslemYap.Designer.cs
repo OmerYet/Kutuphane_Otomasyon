@@ -48,13 +48,13 @@ namespace Kutuphane_Otomasyon.Formlar
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(954, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(1970, 430);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 33);
+            this.label1.Location = new System.Drawing.Point(21, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 17);
             this.label1.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace Kutuphane_Otomasyon.Formlar
             // 
             // islemyTcBultxt
             // 
-            this.islemyTcBultxt.Location = new System.Drawing.Point(237, 30);
+            this.islemyTcBultxt.Location = new System.Drawing.Point(188, 47);
             this.islemyTcBultxt.Name = "islemyTcBultxt";
             this.islemyTcBultxt.Size = new System.Drawing.Size(221, 22);
             this.islemyTcBultxt.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace Kutuphane_Otomasyon.Formlar
             // 
             this.islemyapBulbtn.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.islemyapBulbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.islemyapBulbtn.Location = new System.Drawing.Point(73, 78);
+            this.islemyapBulbtn.Location = new System.Drawing.Point(24, 95);
             this.islemyapBulbtn.Name = "islemyapBulbtn";
             this.islemyapBulbtn.Size = new System.Drawing.Size(158, 30);
             this.islemyapBulbtn.TabIndex = 3;
@@ -82,7 +82,7 @@ namespace Kutuphane_Otomasyon.Formlar
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(340, 85);
+            this.label2.Location = new System.Drawing.Point(291, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 4;
@@ -94,21 +94,21 @@ namespace Kutuphane_Otomasyon.Formlar
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(478, 257);
+            this.dataGridView2.Size = new System.Drawing.Size(1494, 257);
             this.dataGridView2.TabIndex = 5;
             // 
             // islemyAdAramatxt
             // 
-            this.islemyAdAramatxt.Location = new System.Drawing.Point(596, 50);
+            this.islemyAdAramatxt.Location = new System.Drawing.Point(488, 47);
             this.islemyAdAramatxt.Name = "islemyAdAramatxt";
-            this.islemyAdAramatxt.Size = new System.Drawing.Size(370, 22);
+            this.islemyAdAramatxt.Size = new System.Drawing.Size(511, 22);
             this.islemyAdAramatxt.TabIndex = 6;
             this.islemyAdAramatxt.TextChanged += new System.EventHandler(this.islemyAdAramatxt_TextChanged);
             // 
             // islemyKitapIslembtn
             // 
             this.islemyKitapIslembtn.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.islemyKitapIslembtn.Location = new System.Drawing.Point(73, 170);
+            this.islemyKitapIslembtn.Location = new System.Drawing.Point(102, 237);
             this.islemyKitapIslembtn.Name = "islemyKitapIslembtn";
             this.islemyKitapIslembtn.Size = new System.Drawing.Size(221, 64);
             this.islemyKitapIslembtn.TabIndex = 7;

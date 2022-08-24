@@ -41,7 +41,7 @@ namespace Kutuphane_Otomasyon
             this.islempEklebtn = new System.Windows.Forms.Button();
             this.islempKullanicibtn = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.islempGeriAlbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@ namespace Kutuphane_Otomasyon
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.islempGeriAlbtn);
             this.panel1.Controls.Add(this.islemyIslemYapbtn);
             this.panel1.Controls.Add(this.islempKaynakSilbtn);
             this.panel1.Controls.Add(this.islempKaynakGuncellebtn);
@@ -78,7 +78,7 @@ namespace Kutuphane_Otomasyon
             this.islemyIslemYapbtn.Name = "islemyIslemYapbtn";
             this.islemyIslemYapbtn.Size = new System.Drawing.Size(245, 80);
             this.islemyIslemYapbtn.TabIndex = 8;
-            this.islemyIslemYapbtn.Text = "İşlem Yap";
+            this.islemyIslemYapbtn.Text = "Ödünç Ver";
             this.islemyIslemYapbtn.UseVisualStyleBackColor = false;
             this.islemyIslemYapbtn.Click += new System.EventHandler(this.islemyIslemYapbtn_Click);
             // 
@@ -227,21 +227,22 @@ namespace Kutuphane_Otomasyon
             this.kullaniciBilgiPanel.Size = new System.Drawing.Size(1256, 80);
             this.kullaniciBilgiPanel.TabIndex = 0;
             // 
-            // button1
+            // islempGeriAlbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Wheat;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 570);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 80);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "İşlem Yap";
-            this.button1.UseVisualStyleBackColor = false;
+            this.islempGeriAlbtn.BackColor = System.Drawing.Color.Wheat;
+            this.islempGeriAlbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.islempGeriAlbtn.FlatAppearance.BorderSize = 0;
+            this.islempGeriAlbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.islempGeriAlbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.islempGeriAlbtn.Image = ((System.Drawing.Image)(resources.GetObject("islempGeriAlbtn.Image")));
+            this.islempGeriAlbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.islempGeriAlbtn.Location = new System.Drawing.Point(0, 570);
+            this.islempGeriAlbtn.Name = "islempGeriAlbtn";
+            this.islempGeriAlbtn.Size = new System.Drawing.Size(245, 80);
+            this.islempGeriAlbtn.TabIndex = 9;
+            this.islempGeriAlbtn.Text = "Geri Al";
+            this.islempGeriAlbtn.UseVisualStyleBackColor = false;
+            this.islempGeriAlbtn.Click += new System.EventHandler(this.islempGeriAlbtn_Click);
             // 
             // IslemPaneli
             // 
@@ -273,6 +274,6 @@ namespace Kutuphane_Otomasyon
         private System.Windows.Forms.Button islempKaynakEklebtn;
         private System.Windows.Forms.Button islempKaynakbtn;
         private System.Windows.Forms.Button islemyIslemYapbtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button islempGeriAlbtn;
     }
 }

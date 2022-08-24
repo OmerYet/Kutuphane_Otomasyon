@@ -48,6 +48,7 @@ namespace Kutuphane_Otomasyon
                 islempGuncellebtn.Visible = false;
                 islempSilbtn.Visible = false;
             }
+
             FrmKullaniciListesi klistesiform = new FrmKullaniciListesi();
             klistesiform.MdiParent = this;
             klistesiform.Show();
@@ -97,6 +98,7 @@ namespace Kutuphane_Otomasyon
                 islempKaynakGuncellebtn.Visible = false;
                 islempKaynakSilbtn.Visible = false;
             }
+
             FrmKaynakListesi kalistesiform= new FrmKaynakListesi();
             kalistesiform.MdiParent = this;
             kalistesiform.Show();
@@ -130,6 +132,14 @@ namespace Kutuphane_Otomasyon
             FrmIslemYap islemyapForm = new FrmIslemYap();
             islemyapForm.MdiParent = this;
             islemyapForm.Show();
+        }
+
+        //Geri Al
+        private void islempGeriAlbtn_Click(object sender, EventArgs e)
+        {
+            FrmIslemGeriAl islemGeriAlForm = new FrmIslemGeriAl();
+            islemGeriAlForm.MdiParent = this;
+            islemGeriAlForm.Show();
         }
     }
 }

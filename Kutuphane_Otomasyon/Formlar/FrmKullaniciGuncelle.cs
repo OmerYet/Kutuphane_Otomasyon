@@ -39,9 +39,9 @@ namespace Kutuphane_Otomasyon.Formlar
             kullaniciFavTurtxt.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             kullaniciTctxt.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             kullaniciTelefontxt.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            kullaniciMailtxt.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-            kullaniciCezatxt.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
-            kullaniciKutuphanetxt.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
+            kullaniciCezatxt.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            kullaniciKutuphanetxt.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
+            kullaniciMailtxt.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
         }
 
         
